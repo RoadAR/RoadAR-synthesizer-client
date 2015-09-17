@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['zhulik.gleb@gmail.com']
 
   spec.summary       = %q{Gem-client for RoadAR-synthesizer microservice}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.description   = %q{Gem-client for RoadAR-synthesizer microservice}
   spec.homepage      = 'https://github.com/RoadAR/RoadAR-synthesizer-client'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
