@@ -22,8 +22,8 @@ module RoadAR
           end
         end
 
-        def create(input_url)
-          wrap(post(base_url + '/jobs.json', input_url: input_url))
+        def create(params)
+          wrap(post(base_url + '/jobs.json', params))
         end
 
         def find(id)

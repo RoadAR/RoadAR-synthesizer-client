@@ -5,11 +5,14 @@ module RoadAR
     module Client
       module Entities
         class Job
-          attr_reader :id, :input_url, :status, :output_url
+          attr_reader :id, :input_url, :status, :output_url, :logs
 
           def initialize(job_json)
             job_json.each do |k, v|
               instance_variable_set("@#{k}", v)
+              define_singleton_method k do
+                instance_variable_get("@#{k}")
+              end
             end
           end
 
