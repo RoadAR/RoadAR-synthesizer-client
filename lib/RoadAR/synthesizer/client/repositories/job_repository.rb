@@ -1,6 +1,7 @@
 require 'httparty'
 
 require 'RoadAR/synthesizer/client/entities/job'
+require 'RoadAR/synthesizer/client/exceptions/remote_error'
 
 module RoadAR
   module Synthesizer
@@ -46,13 +47,20 @@ module RoadAR
           end
 
           def get(url)
-            HTTParty.get(url, query: { token: token })
+            res = HTTParty.get(url, query: { token: token })
+            unless res.success?
+              raise RoadAR::Synthesizer::Client::Exceptions::RemoteError.new(res.parsed_response)
+            end
+            res
           end
 
           def post(url, **params)
-            HTTParty.post(url, body: { job: params }, query: { token: token })
+            res = HTTParty.post(url, body: { job: params }, query: { token: token })
+            unless res.success?
+              raise RoadAR::Synthesizer::Client::Exceptions::RemoteError.new(res.parsed_response)
+            end
+            res
           end
-
         end
       end
     end
