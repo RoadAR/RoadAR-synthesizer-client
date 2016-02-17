@@ -7,7 +7,7 @@ module RoadAR
   module Synthesizer
     module Client
       module Repositories
-        class JobRepository
+        class SynthJobRepository
           include Singleton
 
           class << self
@@ -35,7 +35,7 @@ module RoadAR
           private
 
           def wrap(entity)
-            RoadAR::Synthesizer::Client::Entities::Job.new(entity)
+            RoadAR::Synthesizer::Client::Entities::SynthJob.new(entity)
           end
 
           def base_url

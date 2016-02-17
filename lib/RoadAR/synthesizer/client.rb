@@ -1,6 +1,6 @@
 require 'RoadAR/synthesizer/client/version'
 require 'RoadAR/synthesizer/client/config'
-require 'RoadAR/synthesizer/client/repositories/job_repository'
+require 'RoadAR/synthesizer/client/repositories/synth_job_repository'
 
 module RoadAR
   module Synthesizer
