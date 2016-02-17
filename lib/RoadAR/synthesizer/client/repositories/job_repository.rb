@@ -1,6 +1,6 @@
 require 'httparty'
 
-require 'RoadAR/synthesizer/client/entities/job'
+require 'RoadAR/synthesizer/client/entities/synth_job'
 require 'RoadAR/synthesizer/client/exceptions/remote_error'
 
 module RoadAR
