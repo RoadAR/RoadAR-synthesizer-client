@@ -6,7 +6,7 @@ module RoadAR
       module Entities
         class TrainingJob
           include RoadAR::Synthesizer::Client::Entities::Entity
-          attr_reader :id, :training_set_url, :testing_set_url, :false_positive_set_url, :status, :logs
+          attr_reader :id, :training_set_url, :testing_set_url, :negative_set_url, :status, :logs, :output_url
         end
       end
     end
